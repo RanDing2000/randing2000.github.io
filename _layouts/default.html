@@ -29,10 +29,10 @@
                 Ran Ding 
               </h1>
               <!-- <p>I am a PhD student at the <a href="https://www.ri.cmu.edu/">Robotics Institute</a>, part of the <a href="https://www.scs.cmu.edu/">School of Computer Science</a> at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, where I work on 3D computer vision. My PhD advisor is <a href="http://www.cs.cmu.edu/~hebert/">Martial Hebert</a>. -->
-              <p> I am a MSc candidate in <a href="https://www.tum.de/studium/studienangebot/detail/informatik-master-of-science-msc">Informatics</a> at the <a href="https://www.tum.de/">Technical University of Munich</a>. Currently, I am a student researcher at the <a href="https://niessnerlab.org/">Visual Computing and Artificial Intelligence Lab</a>, led by <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Prof. Matthias Niessner</a>. Previously, I earned a BEng in Computer Science, from <a href="https://en.dlut.edu.cn/">Dalian University of Technology</a>.
+              <p> I am an MSc candidate in <a href="https://www.tum.de/studium/studienangebot/detail/informatik-master-of-science-msc">Informatics</a> at the <a href="https://www.tum.de/">Technical University of Munich</a> and a student researcher at the <a href="https://niessnerlab.org/">Visual Computing and Artificial Intelligence Lab</a>, led by <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Prof. Matthias Niessner</a>. Previously, I earned a BEng in Computer Science, from <a href="https://en.dlut.edu.cn/">Dalian University of Technology</a>.
               </p>
               <p>
-                During my bachelor's degree, I focused on robotics and embedded system design, earning three national awards in Chinese Robotics and Artificial Intelligence competitions, including the <a href="http://nuedc.xjtu.edu.cn/">National Undergraduate Electronics Design Contest</a>. During my senior year, I am chosen as an exchange student at <a href="https://www.tum.de/">TUM</a>, where I begin my research and interest in 3D computer vision. In addition, I am fortunate to have been picked for the Allianz Scholarship for the Top Chinese Student (1400 Euros, for 24 months).
+                I focused on robotics and embedded system design as an undergraduate, earning three national awards in Chinese Robotics and Artificial Intelligence competitions, including the <a href="http://nuedc.xjtu.edu.cn/">National Undergraduate Electronics Design Contest</a>. During my senior year, I am chosen as an exchange student at <a href="https://www.tum.de/">TUM</a>, where I begin my research and interest in 3D computer vision. In addition, I am fortunate to have been picked for the Allianz Scholarship for the Top Chinese Student (1400 Euros, for 24 months).
                 <!-- During my bachelor period, I early focused on working on robotics and embedded system design, winning three national prizes in chinese top-tier Robotics and Artificial Intelligence lab, including <a href="http://nuedc.xjtu.edu.cn/">National Undergraduate Electronics Design Contest</a>. During my senior year, I am selected as exchanging at <a href="https://www.tum.de/">TUM</a>, when I start my research and interests in 3D Computer Vision. In addition, I am lucky to be selected as a member of the Allianz Scholarship for Top Chinese Student (1400 Euros, for 24 months.)     -->
                 <!-- From 2011 to 2017, I worked at <a href="https://www.intel.com">Intel</a>, as part of <a href="https://www.intelrealsense.com/">Intel RealSense</a>. I primarily designed computer vision algorithms for efficient hardware ASICs, including the Intel RealSense <a href="https://software.intel.com/en-us/articles/realsense-r200-camera">R200</a> and <a href="https://software.intel.com/en-us/realsense/d400">D400</a> RGB-D sensors. Additionally, I worked on <a href="https://github.com/IntelRealSense/librealsense">software APIs</a>, <a href="https://patents.google.com/patent/US9992474B2">active illumination systems</a>, <a href="https://patents.google.com/patent/US9304597">human-computer interaction devices</a>, and helped develop demos for trade shows, including CES 2012-2016. -->
                 
@@ -50,7 +50,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="/images/ran_photo.png">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="images/ran_photo.jpg">
             </td>
           </tr>
         </table>
@@ -74,7 +74,7 @@
           {% if cat == 'TUM_courses' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.images}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
@@ -103,7 +103,7 @@
               <a href="{{post.report}}">report</a> /
               {% endif %}
               {% if post.slide %}
-              <a href="{{post.slide}}">report</a> 
+              <a href="{{post.slide}}">slide</a> 
               {% endif %}
               <p></p>
               {{ post.excerpt }}
