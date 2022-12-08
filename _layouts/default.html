@@ -77,7 +77,12 @@
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <!-- <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" /> -->
               <!-- <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" /> -->
-              <img src="/tn{{post.image}}"  style="width:auto; height:auto; max-width:100%;" />
+              {% if post.title == 'Unsupervised Multi-View Stereo with Neural Radiance Field' %}
+              <img src="images/3DSpatial.jpg"  style="width:auto; height:auto; max-width:100%;" />
+              {% endif %}
+              {% if post.title == 'Stereo Reconstruction' %}
+              <img src="images/3DScan.jpg"  style="width:auto; height:auto; max-width:100%;" />
+              {% endif %}
               <!-- <img src='images/mira_after.jpg' width="160"></div> -->
               <!-- <img src="/{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" /> -->
             </td>
