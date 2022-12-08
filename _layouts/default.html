@@ -29,10 +29,10 @@
                 Ran Ding 
               </h1>
               <!-- <p>I am a PhD student at the <a href="https://www.ri.cmu.edu/">Robotics Institute</a>, part of the <a href="https://www.scs.cmu.edu/">School of Computer Science</a> at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, where I work on 3D computer vision. My PhD advisor is <a href="http://www.cs.cmu.edu/~hebert/">Martial Hebert</a>. -->
-              <p> I am a M.Sc. candidate at the <a href="https://www.tum.de/">Technical University of Munich</a>, major in <a href="https://www.tum.de/studium/studienangebot/detail/informatik-master-of-science-msc">Informatics</a>. Meanwhile, I am a student researcher at the <a href="https://niessnerlab.org/">Visual Computing and Artificial Intelligence Lab</a>, led by <a href="https://niessnerlab.org/">Prof. Matthias Niessner.</a>. Previously, I received my Bachelor's Degree in <a href="https://www.tum.de/">Dalian University of Technology</a>, major in Computer Science.
+              <p> I am a M.Sc. candidate at the <a href="https://www.tum.de/">Technical University of Munich</a>, major in <a href="https://www.tum.de/studium/studienangebot/detail/informatik-master-of-science-msc">Informatics</a>. Meanwhile, I am a student researcher at the <a href="https://niessnerlab.org/">Visual Computing and Artificial Intelligence Lab</a>, led by <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Prof. Matthias Niessner</a>. Previously, I received my Bachelor's Degree in <a href="https://www.tum.de/">Dalian University of Technology</a>, major in Computer Science.
               </p>
               <p>
-                During my bachelor period, I early focused on working on robotics and embedded system design, winning three national prizes in chinese top-tier Robotics and Artificial Intelligence lab, including the most prestigious <a href="http://nuedc.xjtu.edu.cn/">National Undergraduate Electronics Design Contest</a>. During my senior year, I am selected as exchanging at TUM, when I starts my research and interests in 3D Computer Vision. In addition, I am lucky to be selected as a member of the Allianz Scholarship for Top Chinese Student (1400 Euros, for 24 months.)    
+                During my bachelor period, I early focused on working on robotics and embedded system design, winning three national prizes in chinese top-tier Robotics and Artificial Intelligence lab, including <a href="http://nuedc.xjtu.edu.cn/">National Undergraduate Electronics Design Contest</a>. During my senior year, I am selected as exchanging at <a href="https://www.tum.de/">TUM</a>, when I start my research and interests in 3D Computer Vision. In addition, I am lucky to be selected as a member of the Allianz Scholarship for Top Chinese Student (1400 Euros, for 24 months.)    
                 <!-- From 2011 to 2017, I worked at <a href="https://www.intel.com">Intel</a>, as part of <a href="https://www.intelrealsense.com/">Intel RealSense</a>. I primarily designed computer vision algorithms for efficient hardware ASICs, including the Intel RealSense <a href="https://software.intel.com/en-us/articles/realsense-r200-camera">R200</a> and <a href="https://software.intel.com/en-us/realsense/d400">D400</a> RGB-D sensors. Additionally, I worked on <a href="https://github.com/IntelRealSense/librealsense">software APIs</a>, <a href="https://patents.google.com/patent/US9992474B2">active illumination systems</a>, <a href="https://patents.google.com/patent/US9304597">human-computer interaction devices</a>, and helped develop demos for trade shows, including CES 2012-2016. -->
                 
               </p>
@@ -49,7 +49,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/ran_photo.jpeg">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="/images/ran_photo.png">
             </td>
           </tr>
         </table>
@@ -70,7 +70,7 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'research' %}
+          {% if cat == 'TUM_courses' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
@@ -83,20 +83,23 @@
               <br>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
-              {% if post.arxiv %}
+              <!-- {% if post.arxiv %}
               <a href="{{post.arxiv}}">arxiv</a> /
               {% endif %}
               {% if post.video %}
               <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
+              {% endif %} -->
+              <!-- {% if post.code %}
               <a href="{{post.code}}">code</a> /
-              {% endif %}
+              {% endif %} -->
               {% if post.poster %}
               <a href="{{post.poster}}">poster</a> /
               {% endif %}
-              {% if post.slides %}
+              <!-- {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
+              {% endif %} -->
+              {% if post.report %}
+              <a href="{{post.report}}">report</a> /
               {% endif %}
               <p></p>
               {{ post.excerpt }}
