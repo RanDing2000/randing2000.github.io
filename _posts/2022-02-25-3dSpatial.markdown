@@ -12,4 +12,4 @@ report: /pdfs/Group2_SSCasMVSNeRF_FinalReport.pdf
 #author: "Leo Keselman"
 #subtitle: "A low power, wireless sensor"
 ---
-We extend the Neural Radiance Field in the field of Multi-View Stereo and train it in an unsupervised manner to resolve such ambiguity issues of view correspondences.
+We extended the Neural Radiance Field in the field of Multi-View Stereo and trained it in an unsupervised manner to resolve such ambiguity issues of view correspondences.
