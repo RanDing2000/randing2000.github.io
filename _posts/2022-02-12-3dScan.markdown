@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Stereo Reconstruction"
+# date:   2010-06-22 18:08:39 +00:00
+date: 2022-02-25
+image: /images/3DSpatial.jpg
+categories: TUM_courses
+venure: "3D Scanning and Motion Capture"
+report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
+#course: " Berkeley"
+#author: "Leo Keselman"
+#subtitle: "A low power, wireless sensor"
+---
+We implemented a traditional stereo reconstruction pipeline consisting of SfM and MVS and analyzed the qualitative and quantitative performance of various approaches.
