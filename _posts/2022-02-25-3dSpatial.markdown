@@ -2,10 +2,10 @@
 layout: post
 title: "Unsupervised Multi-View Stereo with Neural Radiance Field"
 # date:   2010-06-22 18:08:39 +00:00
-date: 2022-02-25
+date: 2022-02
 image: /images/3DSpatial.jpg
 categories: TUM_courses
-venure: "3D Scanning and Spatial learning"
+venue: "3D Scanning and Spatial learning"
 report: /pdfs/Group2_SSCasMVSNeRF_FinalReport.pdf
 #course: " Berkeley"
 #author: "Leo Keselman"
