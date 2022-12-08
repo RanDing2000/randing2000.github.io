@@ -5,7 +5,7 @@ title: "Stereo Reconstruction"
 date: 2022-02-15
 # image: /images/3DScan.jpg
 categories: TUM_courses
-image: /images/3DScan.jpg
+image: images/3DScan.jpg
 venue: "3D Scanning and Motion Capture"
 report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
 slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
