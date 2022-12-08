@@ -7,6 +7,7 @@ image: /images/3DSpatial.jpg
 categories: TUM_courses
 venue: "3D Scanning and Motion Capture"
 report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
+slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
 #course: " Berkeley"
 #author: "Leo Keselman"
 #subtitle: "A low power, wireless sensor"
