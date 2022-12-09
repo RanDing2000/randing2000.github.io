@@ -14,3 +14,4 @@ report: /pdfs/Group2_SSCasMVSNeRF_FinalReport.pdf
 #subtitle: "A low power, wireless sensor"
 ---
 We extended the Neural Radiance Field in the field of Multi-View Stereo and trained it in an unsupervised manner to resolve such ambiguity issues of view correspondences.
+<b>Topics: <b>Multiview-Stereo, Neural Radiance Field, Unsupervised Learning

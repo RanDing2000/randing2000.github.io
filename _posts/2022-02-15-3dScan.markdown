@@ -14,3 +14,4 @@ slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
 #subtitle: "A low power, wireless sensor"
 ---
 We implemented a traditional stereo reconstruction pipeline consisting of SfM and MVS and analyzed the qualitative and quantitative performance of various approaches.
+<b>Topics: <b>Traditional 3D Reconstruction, Structure from Motion
