@@ -5,7 +5,7 @@ title: "National Undergraduate Electronic Design Contest Liaoning Division"
 date: 2019-07-01
 # image: /images/3DScan.jpg
 categories: TUM_courses
-image: /Users/randing/work/perosonalwebsite/randing2000.github.io/images/sheet_counter.jpg
+image: images/sheet_counter.jpg
 # supp: awards/supp-curlbot.jpg
 venue: "Project at DUT Embedded Intelligent System Lab"
 # report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
