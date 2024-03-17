@@ -6,7 +6,7 @@ date: 2024-02-01
 # image: /images/3DSpatial.jpg
 categories: TUM_courses
 image: images/3DVQA.jpg
-venue: "3D Visual Prompting for Visual Question Answering"
+venue: "3D Vision Practical Course"
 slide: /pdfs/3DVQA_Slide.pdf
 report: /pdfs/3D_Visual_Prompting_for_Visual_Question_Answering.pdf
 #course: " Berkeley"

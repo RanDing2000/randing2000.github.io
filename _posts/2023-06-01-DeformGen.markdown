@@ -6,7 +6,7 @@ date: 2023-06-01
 # image: /images/3DSpatial.jpg
 categories: TUM_research
 image: images/DeformGen.jpg
-venue: "Deformation Generation via Autoregressive Models"
+venue: "TUM Guided Research"
 slide: /pdfs/DeformGen_prensentation_Slide.pdf
 #course: " Berkeley"
 #author: "Leo Keselman"
