@@ -14,4 +14,4 @@ report: /pdfs/3D_Visual_Prompting_for_Visual_Question_Answering.pdf
 #subtitle: "A low power, wireless sensor"
 ---
 We proposed a novel visual question answer model, that can directly take 3d scene point cloud as input, and generated a high-quality benchmark using LLM.
-<b>Topics: <b> Visual Question Answering, 3D Visual Prompting, Point Cloud Processing
+<b>Topics: <b> Visual Question Answering, 3D Visual Prompting
