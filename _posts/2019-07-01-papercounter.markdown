@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Unsupervised Multi-View Stereo with Neural Radiance Field"
+# date:   2010-06-22 18:08:39 +00:00
+date: 2019-07-01
+# image: /images/3DSpatial.jpg
+categories: DUT_projects
+image: images/3DSpatial.jpg
+venue: "3D Scanning and Spatial learning"
+report: /pdfs/Group2_SSCasMVSNeRF_FinalReport.pdf
+#course: " Berkeley"
+#author: "Leo Keselman"
+#subtitle: "A low power, wireless sensor"
+---
+We extended the Neural Radiance Field in the field of Multi-View Stereo and trained it in an unsupervised manner to resolve such ambiguity issues of view correspondences.
+<b>Topics: <b>Multiview-Stereo, Neural Radiance Field, Unsupervised Learning
