@@ -5,7 +5,7 @@ title: "Chinese Undergraduate Curling AI Challenge"
 date: 2020-07-01
 # image: /images/3DScan.jpg
 categories: TUM_courses
-image: /images/Curlbot.jpg
+image: images/Curlbot.jpg
 supp: awards/supp-curlbot.jpg
 venue: "Project at DUT Embedded Intelligent System Lab"
 # report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
