@@ -8,6 +8,7 @@ categories: TUM_courses
 image: images/sheet_counter.jpg
 # supp: awards/supp-curlbot.jpg
 venue: "Embedded System Design Project at DUT Embedded Intelligent System Lab"
+report: /pdfs/papersheet_report.pdf
 # report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
 # slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
 #course: " Berkeley"
