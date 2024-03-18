@@ -82,7 +82,7 @@
               <a href="{{post.report}}">report</a> /
               {% endif %}
               {% if post.slide %}
-              <a href="{{post.slide}}">slide</a> 
+              <a href="{{post.slide}}">slide</a> /
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -166,13 +166,14 @@
               <a href="{{post.supp}}">supplementary</a> 
               {% endif %}
               {% if post.slide %}
-              <a href="{{post.slide}}">slide</a> 
+              <a href="{{post.slide}}">slide</a> /
               {% endif %}
               {% if post.album %}
-              <a href="{{post.album}}">album</a> 
+              <a href="{{post.album}}">album</a> /
               {% endif %}
-              {% if post.video_link %}
-              <a href="{{ post.video_link }}">video</a> /
+              {% if post.video_curlbot_link %}
+              <!-- <a href="{{ post.video_link }}">video</a> / -->
+              <a href="https://drive.google.com/drive/folders/1ea7XGiH5t4okWxd2uxowAMAnzDEsewm4">video</a> /
               {% endif %}
               <p></p>
               {{ post.excerpt }}
