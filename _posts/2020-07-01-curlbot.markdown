@@ -7,7 +7,7 @@ date: 2020-07-01
 categories: TUM_courses
 image: images/Curlbot.jpg
 # supp: awards/supp-curlbot.jpg
-venue: "Project at DUT Embedded Intelligent System Lab"
+venue: "Robotics Project at DUT Embedded Intelligent System Lab"
 # report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
 # slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
 #course: " Berkeley"
@@ -15,4 +15,4 @@ venue: "Project at DUT Embedded Intelligent System Lab"
 #subtitle: "A low power, wireless sensor"
 ---
 We refined motion strategies for curling robot, including curve shots/hits and implemented a neural network regression model to accurately predict the relationship between velocity (both linear and angular) and the current position of the robot.
-<b>Topics:<b>   robot decision, neural network regrssion
+<b>Topics:<b>   Robot decision, Neural network regrssion

@@ -7,7 +7,7 @@ date: 2020-09-01
 categories: TUM_courses
 image: images/car_tracker.jpg
 # supp: awards/supp-curlbot.jpg
-venue: "Project at DUT Embedded Intelligent System Lab"
+venue: "Robotics Project at DUT Embedded Intelligent System Lab"
 # report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
 # slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
 #course: " Berkeley"
@@ -15,4 +15,4 @@ venue: "Project at DUT Embedded Intelligent System Lab"
 #subtitle: "A low power, wireless sensor"
 ---
 We developed a target tracking system that controls a vehicle to follow a predefined path and implements algorithms for data communication and parsing between the millimeter-wave radar and the vehicle.
-<b>Topics:<b> MCU design, Radar sensor, PID control
+<b>Topics:<b> MCU Development, Radar sensor, PID

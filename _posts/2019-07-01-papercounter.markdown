@@ -7,7 +7,7 @@ date: 2019-07-01
 categories: TUM_courses
 image: images/sheet_counter.jpg
 # supp: awards/supp-curlbot.jpg
-venue: "Project at DUT Embedded Intelligent System Lab"
+venue: "Embedded System Design Project at DUT Embedded Intelligent System Lab"
 # report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
 # slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
 #course: " Berkeley"
@@ -15,4 +15,4 @@ venue: "Project at DUT Embedded Intelligent System Lab"
 #subtitle: "A low power, wireless sensor"
 ---
 We developed a paper counting device, utilizing the least squares method to establish a correlation between paper quantity and capacitance data collected by the FDC2214 capacitance sensor, while enhancing the communication among the various modules.
-<b>Topics:<b> MCU design, least squares method, capacitance sensor
+<b>Topics:<b> MCU Development, Least squares method, Capacitance sensor

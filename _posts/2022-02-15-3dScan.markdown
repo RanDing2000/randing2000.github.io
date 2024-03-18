@@ -6,7 +6,8 @@ date: 2022-02-15
 # image: /images/3DScan.jpg
 categories: TUM_courses
 image: images/3DScan.jpg
-venue: "3D Scanning and Motion Capture"
+# venue: "3D Scanning and Motion Capture"
+venue: "3D Computer Vision Project at TUM Visual Computing & Artificial Intelligence Lab"
 report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
 slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
 #course: " Berkeley"
@@ -14,4 +15,4 @@ slide: /pdfs/Group10_StereoReconstruction_Slide.pdf
 #subtitle: "A low power, wireless sensor"
 ---
 We implemented a traditional stereo reconstruction pipeline consisting of SfM and MVS and analyzed the qualitative and quantitative performance of various approaches.
-<b>Topics:<b>   Traditional 3D Reconstruction, Structure from Motion
+<b>Topics:<b> Traditional 3D Reconstruction, Structure from Motion
