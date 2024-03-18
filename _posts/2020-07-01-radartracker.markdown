@@ -6,6 +6,7 @@ date: 2020-09-01
 # image: /images/3DScan.jpg
 categories: TUM_courses
 image: images/car_tracker.jpg
+album: pdfs/album-nanjing2020.pdf
 # supp: awards/supp-curlbot.jpg
 venue: "Robotics Project at DUT Embedded Intelligent System Lab"
 # report: /pdfs/Group10_StereoReconstruction_FinalReport.pdf
