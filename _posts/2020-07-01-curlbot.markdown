@@ -16,4 +16,4 @@ venue: "Robotics Project at DUT Embedded Intelligent System Lab"
 #subtitle: "A low power, wireless sensor"
 ---
 We refined motion strategies for curling robot, including curve shots/hits and implemented a neural network regression model to accurately predict the relationship between velocity (both linear and angular) and the current position of the robot.
-<b>Topics:<b>   Robot decision, Neural network regrssion
+<b>Topics:<b>   Robot decision, Neural network regression
