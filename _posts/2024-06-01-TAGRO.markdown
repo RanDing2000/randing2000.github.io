@@ -8,11 +8,11 @@ categories: TUM_research
 image: images/TARGO.jpg
 venue: "Reseach Internship at TUM Computer Vision Group"
 # slide: /pdfs/DeformGen_prensentation_Slide.pdf
-Paper: "https://arxiv.org/abs/2206.00000"
-Page: "https://targo-benchmark.github.io/"
+paper: "https://arxiv.org/abs/2206.00000"
+page: "https://targo-benchmark.github.io/"
 #course: " Berkeley"
 #author: "Leo Keselman"
 #subtitle: "A low power, wireless sensor"
 ---
-We introduce TARGO, a new benchmark dataset focused on TARget-driven Grasping under Occlusions in cluttered environments. We explore how occlusion affects grasping, revealing that even the SoTA models suffer as occlusion levels rise. We developed TARGO-Net, a transformer-based model with a shape completion module, to enhance grasping performance under these challenging conditions.
+This paper presents TARGO, a new benchmark dataset focused on target-driven grasping under occlusions in cluttered environments. It investigates how occlusion affects grasping, revealing that even state-of-the-art models struggle as occlusion levels increase. To address this, TARGO-Net, a transformer-based model with a shape completion module, was developed to improve grasping performance in these challenging conditions.
 <b>Topics: <b> Target-driven Robot grasping, Occlusion Handling
