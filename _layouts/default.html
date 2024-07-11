@@ -63,6 +63,9 @@
           {% if cat == 'TUM_research' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              {% if post.title == 'TARGO: Benchmarking Target-driven Object Grasping under Occlusions' %}
+              <img src="images/TARGO.jpg"  style="width:auto; height:auto; max-width:100%;" />
+              {% endif %}
               {% if post.title == 'Deformation Generation via Autoregressive Models' %}
               <img src="images/DeformGen.jpg"  style="width:auto; height:auto; max-width:100%;" />
               {% endif %}
@@ -83,6 +86,12 @@
               {% endif %}
               {% if post.slide %}
               <a href="{{post.slide}}">slide</a> /
+              {% endif %}
+              {% if post.page %}
+              <a href="{{post.page}}">page</a> /
+              {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}">paper</a> /
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -118,9 +127,9 @@
               {% if post.title == 'Unsupervised Multi-View Stereo with Neural Radiance Field' %}
               <img src="images/3DSpatial.jpg"  style="width:auto; height:auto; max-width:100%;" />
               {% endif %}
-              {% if post.title == 'TARGO: Benchmarking Target-driven Object Grasping under Occlusions' %}
+              <!-- {% if post.title == 'TARGO: Benchmarking Target-driven Object Grasping under Occlusions' %}
               <img src="images/TARGO.jpg"  style="width:auto; height:auto; max-width:100%;" />
-              {% endif %}
+              {% endif %} -->
               <!-- {% if post.title == '3D Visual Prompting for Visual Question Answering' %}
               <img src="images/3DVQA.jpg"  style="width:auto; height:auto; max-width:100%;" />
               {% endif %} -->
