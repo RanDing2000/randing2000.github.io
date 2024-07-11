@@ -16,4 +16,3 @@ Project Page: "https://targo-benchmark.github.io/"
 ---
 We introduce TARGO, a new benchmark dataset focused on TARget-driven Grasping under Occlusions in cluttered environments. We explore how occlusion affects grasping, revealing that even the SoTA models suffer as occlusion levels rise. We developed TARGO-Net, a transformer-based model with a shape completion module, to enhance grasping performance under these challenging conditions.
 <b>Topics: <b> Target-driven Robot grasping, Occlusion Handling
-```
