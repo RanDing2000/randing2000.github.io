@@ -79,19 +79,19 @@
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
+              <a href="{{ site.baseurl }}{{ post.poster }}">poster</a> /
               {% endif %}
               {% if post.report %}
-              <a href="{{post.report}}">report</a> /
+              <a href="{{ site.baseurl }}{{ post.report }}">report</a> /
               {% endif %}
               {% if post.slide %}
-              <a href="{{post.slide}}">slide</a> /
+              <a href="{{ site.baseurl }}{{ post.slide }}">slide</a> /
               {% endif %}
               {% if post.page %}
-              <a href="{{post.page}}">page</a> /
+              <a href="{{ post.page }}">page</a> /
               {% endif %}
               {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
+              <a href="{{ post.paper }}">paper</a> /
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -166,22 +166,22 @@
               <a href="{{post.code}}">code</a> /
               {% endif %} -->
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
+              <a href="{{ site.baseurl }}{{ post.poster }}">poster</a> /
               {% endif %}
               <!-- {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
               {% endif %} -->
               {% if post.report %}
-              <a href="{{post.report}}">report</a> /
+              <a href="{{ site.baseurl }}{{ post.report }}">report</a> /
               {% endif %}
               {% if post.supp %}
-              <a href="{{post.supp}}">supplementary</a> 
+              <a href="{{ site.baseurl }}{{ post.supp }}">supplementary</a> 
               {% endif %}
               {% if post.slide %}
-              <a href="{{post.slide}}">slide</a> /
+              <a href="{{ site.baseurl }}{{ post.slide }}">slide</a> /
               {% endif %}
               {% if post.album %}
-              <a href="{{post.album}}">album</a> /
+              <a href="{{ site.baseurl }}{{ post.album }}">album</a> /
               {% endif %}
               {% if post.video_curlbot_link %}
               <!-- <a href="{{ post.video_link }}">video</a> / -->
