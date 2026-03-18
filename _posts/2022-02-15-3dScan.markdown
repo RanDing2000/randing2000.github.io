@@ -4,7 +4,7 @@ title: "Stereo Reconstruction"
 # date:   2010-06-22 18:08:39 +00:00
 date: 2022-02-15
 # image: /images/3DScan.jpg
-categories: TUM_courses
+categories: hidden
 image: images/3DScan.jpg
 # venue: "3D Scanning and Motion Capture"
 venue: "3D Computer Vision Project at TUM Visual Computing & Artificial Intelligence Lab"

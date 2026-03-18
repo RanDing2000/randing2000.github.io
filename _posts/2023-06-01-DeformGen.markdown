@@ -4,7 +4,7 @@ title: "Deformation Generation via Autoregressive Models"
 # date:   2010-06-22 18:08:39 +00:00
 date: 2023-06-01
 # image: /images/3DSpatial.jpg
-categories: TUM_research
+categories: TUM_courses
 image: images/DeformGen.jpg
 venue: "Reseach Internship at TUM Visual Computing & Artificial Intelligence Lab"
 slide: /pdfs/DeformGen_prensentation_Slide.pdf

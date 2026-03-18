@@ -2,11 +2,12 @@
 layout: post
 title: "TARGO: Benchmarking Target-driven Object Grasping under Occlusions"
 # date:   2010-06-22 18:08:39 +00:00
-date: 2024-06-01
+date: 2026-01-01
 # image: /images/3DSpatial.jpg
 categories: TUM_research
 image: images/TARGO.jpg
-venue: "IJCV"
+authors: "Ran Ding<sup>2*</sup>, Ziyuan Qin<sup>2*</sup>, Yan Xia<sup>1*</sup>, Guanqi Zhan<sup>4</sup>, Kaichen Zhou<sup>4</sup>, Long Yang<sup>3</sup>, Hao Dong<sup>3</sup>, Daniel Cremers<sup>2,5</sup><br><small>* Equal Contribution</small>"
+venue: "International Journal of Computer Vision"
 # slide: /pdfs/DeformGen_prensentation_Slide.pdf
 paper: "https://arxiv.org/abs/2407.06168"
 page: "https://targo-benchmark.github.io/"
