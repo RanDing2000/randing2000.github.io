@@ -26,7 +26,8 @@
   <main id="top" class="site-shell page-shell">
     <section class="hero">
       <div class="hero-media">
-        <img class="hero-portrait" alt="Ran Ding profile photo" src="images/ran_photo.jpg">
+        <img class="hero-portrait" id="hero-random-photo" alt="Ran Ding portrait in different scenarios" src="images/ran_photo.jpg">
+        <p class="hero-media-note">Refresh the page to see Ran in different environments.</p>
       </div>
       <div class="hero-copy">
         <p class="eyebrow">Embodied AI, computer vision, and multimodal learning</p>
@@ -223,6 +224,19 @@
       var lightbox = document.getElementById('image-lightbox');
       var preview = document.getElementById('image-lightbox-preview');
       var cards = Array.prototype.slice.call(document.querySelectorAll('.paper-card'));
+      var heroPhoto = document.getElementById('hero-random-photo');
+      var heroPhotos = [
+        'images/ran_photo.jpg',
+        'images/ran_more_photos/Weixin Image_2026-03-19_014938_978.jpg',
+        'images/ran_more_photos/Weixin Image_20260319014951_630.jpg',
+        'images/ran_more_photos/Weixin Image_20260319015001_631.jpg',
+        'images/ran_more_photos/Weixin Image_20260319015009_633.jpg',
+        'images/ran_more_photos/Weixin Image_20260319015016_634.jpg'
+      ];
+
+      if (heroPhoto) {
+        heroPhoto.src = heroPhotos[Math.floor(Math.random() * heroPhotos.length)];
+      }
 
       function closeLightbox() {
         lightbox.classList.remove('is-open');
