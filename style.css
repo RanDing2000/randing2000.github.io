@@ -130,7 +130,7 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  grid-template-columns: minmax(220px, 310px) minmax(0, 1fr);
   gap: clamp(20px, 3vw, 42px);
   align-items: center;
   padding: clamp(12px, 2vw, 22px) 0 clamp(10px, 2vw, 18px);
@@ -152,7 +152,7 @@ img {
 }
 
 .hero-portrait {
-  width: min(100%, 380px);
+  width: min(100%, 320px);
   aspect-ratio: 5 / 4;
   object-fit: cover;
   margin: 0 auto;
@@ -171,6 +171,13 @@ img {
 
 .hero-copy {
   padding-block: 2px;
+}
+
+.hero-copy h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.15rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
 }
 
 .hero-lead {
