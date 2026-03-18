@@ -228,8 +228,9 @@ img {
   margin-bottom: 0.8rem;
 }
 
+.narrow-section .section-heading,
 .prose-block {
-  max-width: 52rem;
+  max-width: 50rem;
 }
 
 .card-list {
