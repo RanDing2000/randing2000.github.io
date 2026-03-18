@@ -188,6 +188,15 @@ img {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.1));
 }
 
+.focus-label {
+  margin-bottom: 0.3rem;
+  color: var(--accent-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .focus-text {
   margin-bottom: 0;
 }
@@ -220,6 +229,10 @@ img {
   color: var(--accent-soft);
 }
 
+.page-end-count {
+  margin-top: 1.4rem;
+}
+
 .content-section {
   margin-top: clamp(28px, 4vw, 52px);
 }
@@ -228,9 +241,8 @@ img {
   margin-bottom: 0.8rem;
 }
 
-.narrow-section .section-heading,
 .prose-block {
-  max-width: 50rem;
+  max-width: none;
 }
 
 .card-list {

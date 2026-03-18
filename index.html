@@ -35,6 +35,7 @@
         <p class="hero-lead">PhD student at <a href="https://mbzuai.ac.ae/">Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</a>, working with <a href="https://mbzuai.ac.ae/study/faculty/ivan-laptev/">Prof. Ivan Laptev</a> and <a href="https://mbzuai.ac.ae/study/faculty/fabio-pizzati/">Dr. Fabio Pizzati</a>.</p>
         <p class="hero-text">Previously, I earned an MSc in Computer Science from the Technical University of Munich and a BEng in Computer Science from Dalian University of Technology.</p>
         <div class="focus-block">
+          <p class="focus-label">Research Focus</p>
           <p class="focus-text">Supervising AI systems to understand and interact with the physical world.</p>
         </div>
         <p class="contact-line">
@@ -46,15 +47,10 @@
           <span>/</span>
           <a href="https://www.linkedin.com/in/alfred-ding-945280167">LinkedIn</a>
         </p>
-        <p class="visit-count">
-          Visitors <span id="busuanzi_value_site_uv">-</span>
-          <span>/</span>
-          Views <span id="busuanzi_value_site_pv">-</span>
-        </p>
       </div>
     </section>
 
-    <section class="content-section narrow-section" id="about">
+    <section class="content-section" id="about">
       <div class="section-heading">
         <h2>About Me</h2>
       </div>
@@ -104,7 +100,7 @@
           <div class="paper-card-body">
             <h3>TARGO: Benchmarking Target-driven Object Grasping under Occlusions</h3>
             <p class="paper-authors"><strong>Ran Ding</strong>*, Ziyuan Qin*, Yan Xia*<sup>&dagger;</sup>, Guanqi Zhan, Kaichen Zhou, Long Yang, Hao Dong, Daniel Cremers</p>
-            <p class="paper-meta"><span>* Equal Contribution, <sup>&dagger;</sup> Corresponding author</span><span>International Journal of Computer Vision, 2026</span></p>
+            <p class="paper-meta"><span>* Co-first authors, <sup>&dagger;</sup> Corresponding author</span><span>International Journal of Computer Vision, 2026</span></p>
             <p class="paper-links">
               <a href="https://targo-benchmark.github.io/">Project Page</a>
               <a href="https://arxiv.org/abs/2407.06168">arXiv</a>
@@ -115,7 +111,7 @@
       </div>
     </section>
 
-    <section class="content-section narrow-section" id="community">
+    <section class="content-section" id="community">
       <div class="section-heading">
         <h2>Mentors &amp; Collaborators</h2>
       </div>
@@ -212,6 +208,11 @@
         <li>National Second Prize in Chinese Undergraduate Computer Design Contest - AI Challenge, Aug 2020</li>
         <li>National Second Prize in Chinese Undergraduate Curling AI Challenge, Jul 2020</li>
       </ul>
+      <p class="visit-count page-end-count">
+        Visitors <span id="busuanzi_value_site_uv">-</span>
+        <span>/</span>
+        Views <span id="busuanzi_value_site_pv">-</span>
+      </p>
     </section>
   </main>
 
@@ -244,18 +245,25 @@
         preview.removeAttribute('alt');
       }
 
-      document.addEventListener('click', function (event) {
-        var image = event.target.closest('img');
-        if (!image) return;
-        if (image.closest('.image-lightbox')) {
-          closeLightbox();
-          return;
-        }
-
+      function openLightbox(image) {
         preview.src = image.src;
         preview.alt = image.alt || 'Expanded image';
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
+      }
+
+      Array.prototype.forEach.call(document.querySelectorAll('img'), function (image) {
+        if (image.closest('.image-lightbox')) {
+          return;
+        }
+
+        image.addEventListener('mouseenter', function () {
+          openLightbox(image);
+        });
+
+        image.addEventListener('mouseleave', function () {
+          closeLightbox();
+        });
       });
 
       cards.forEach(function (card) {
@@ -272,12 +280,6 @@
             card.classList.add('is-active');
           }
         });
-      });
-
-      lightbox.addEventListener('click', function (event) {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
       });
 
       document.addEventListener('keydown', function (event) {
