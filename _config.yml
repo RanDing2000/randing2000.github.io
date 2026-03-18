@@ -58,8 +58,7 @@ url: "https://randing2000.github.io/"
 # !! You don't need to change any of the configuration flags below !!
 #
 
-#permalink: /:title/
-permalink: /
+permalink: /:title/
 
 
 # The release of Jekyll Now that you're using
