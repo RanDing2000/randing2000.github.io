@@ -8,6 +8,35 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
   <link rel="canonical" href="https://randing2000.github.io/">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <style>
+    img {
+      cursor: zoom-in;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.88);
+      z-index: 9999;
+    }
+
+    .image-lightbox.is-open {
+      display: flex;
+    }
+
+    .image-lightbox img {
+      max-width: min(1100px, 92vw);
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      cursor: zoom-out;
+    }
+  </style>
 </head>
 <body>
   <table style="width:100%;max-width:800px;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -200,5 +229,47 @@
       </td>
     </tr>
   </table>
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+    <img id="image-lightbox-preview" alt="Expanded image">
+  </div>
+  <script>
+    (function () {
+      var lightbox = document.getElementById('image-lightbox');
+      var preview = document.getElementById('image-lightbox-preview');
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        preview.removeAttribute('src');
+        preview.removeAttribute('alt');
+      }
+
+      document.addEventListener('click', function (event) {
+        var image = event.target.closest('img');
+        if (!image) return;
+        if (image.closest('.image-lightbox')) {
+          closeLightbox();
+          return;
+        }
+
+        preview.src = image.src;
+        preview.alt = image.alt || 'Expanded image';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+
+      lightbox.addEventListener('click', function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    }());
+  </script>
 </body>
 </html>
