@@ -201,6 +201,8 @@
         Visitors <span id="busuanzi_value_site_uv">-</span>
         <span>/</span>
         Views <span id="busuanzi_value_site_pv">-</span>
+        <span>/</span>
+        Visitor Country <span id="visitor-country">Loading...</span>
       </p>
     </section>
   </main>
@@ -214,6 +216,7 @@
       var preview = document.getElementById('image-lightbox-preview');
       var cards = Array.prototype.slice.call(document.querySelectorAll('.paper-card'));
       var heroPhoto = document.getElementById('hero-random-photo');
+      var visitorCountry = document.getElementById('visitor-country');
       var heroPhotos = [
         'images/ran_photo.jpg',
         'images/ran_more_photos/Weixin Image_2026-03-19_014938_978.jpg',
@@ -225,6 +228,19 @@
 
       if (heroPhoto) {
         heroPhoto.src = heroPhotos[Math.floor(Math.random() * heroPhotos.length)];
+      }
+
+      if (visitorCountry) {
+        fetch('https://ipapi.co/json/')
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            visitorCountry.textContent = data && data.country_name ? data.country_name : 'Unavailable';
+          })
+          .catch(function () {
+            visitorCountry.textContent = 'Unavailable';
+          });
       }
 
       function closeLightbox() {

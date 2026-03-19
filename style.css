@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  background: linear-gradient(180deg, #f7f4ef 0%, #f1ece4 100%);
+  background: linear-gradient(180deg, #f7f4ef 0%, #f4efe7 68%, #fbfaf7 88%, #ffffff 100%);
   font-family: "Source Sans 3", Georgia, serif;
   font-size: 18px;
   line-height: 1.72;
@@ -100,7 +100,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 76px;
+  min-height: 60px;
 }
 
 .site-brand,
@@ -110,18 +110,18 @@ img {
 }
 
 .site-brand {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   letter-spacing: -0.02em;
 }
 
 .site-nav {
   display: flex;
-  gap: 28px;
+  gap: 24px;
   align-items: center;
 }
 
 .site-nav a {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .page-shell {
@@ -232,6 +232,8 @@ img {
 
 .page-end-count {
   margin-top: 1.4rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(24, 32, 43, 0.08);
 }
 
 .content-section {
