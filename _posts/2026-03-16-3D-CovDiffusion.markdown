@@ -5,6 +5,7 @@ date: 2026-03-16
 categories: TUM_research
 image: images/teaser_3dcovdiffusion.png
 authors: "Chenyuan Chen, Haoran Ding, <strong>Ran Ding</strong>, Tianyu Liu, Zewen He, Anqing Duan, Yoshihiko Nakamura"
-venue: "arXiv"
+venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026"
+paper: "https://arxiv.org/abs/2510.03011"
 ---
 3D-CovDiffusion introduces a 3D-aware diffusion policy for coverage path planning. It focuses on learning planning policies that better understand scene geometry for efficient and reliable coverage behavior.

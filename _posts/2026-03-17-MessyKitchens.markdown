@@ -5,7 +5,7 @@ date: 2026-03-17
 categories: TUM_research
 image: images/teaser_messykitchen.png
 authors: "Junaid Ahmed Ansari*, <strong>Ran Ding</strong>*, Fabio Pizzati, Ivan Laptev<br><small>* Co-first authors</small>"
-venue: "arXiv"
+venue: "European Conference on Computer Vision (ECCV), 2026"
 paper: "http://arxiv.org/abs/2603.16868"
 page: "https://messykitchens.github.io/"
 ---
