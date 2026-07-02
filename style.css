@@ -536,7 +536,9 @@ img {
   box-shadow: inset 4px 0 0 var(--featured);
 }
 
-.paper-card-media img {
+.paper-card-media img,
+.paper-card-media video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   max-height: none;
@@ -544,7 +546,31 @@ img {
   border-radius: 7px;
   border: 1px solid var(--line);
   background: var(--panel-soft);
+}
+
+.paper-card-media img {
   cursor: zoom-in;
+}
+
+.paper-card-media video {
+  cursor: default;
+}
+
+.paper-card-media.is-cropped-preview {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--panel-soft);
+}
+
+.paper-card-media.is-cropped-preview img,
+.paper-card-media.is-cropped-preview video {
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 0;
+  object-position: center center;
+  transform: none;
 }
 
 .paper-card-body {
@@ -735,7 +761,9 @@ img {
   }
 
   .paper-card-media img,
-  .compact-card .paper-card-media img {
+  .paper-card-media video,
+  .compact-card .paper-card-media img,
+  .compact-card .paper-card-media video {
     aspect-ratio: 16 / 9;
     max-height: 220px;
   }
