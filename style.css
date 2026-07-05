@@ -1,5 +1,5 @@
 :root {
-  --bg: #fdfdff;
+  --bg: #ffffff;
   --panel: #ffffff;
   --panel-soft: #fafbff;
   --text: #1c1c1f;
@@ -7,13 +7,13 @@
   --muted: var(--text);
   --quiet: var(--text);
   --line: #dfe2ea;
-  --link: #111111;
-  --link-hover: #5d5bb8;
+  --link: #5d5bb8;
+  --link-hover: #42409c;
   --code-blue: #5d5bb8;
   --code-pink: #6b5fb8;
-  --highlight: #cad3ff;
-  --highlight-soft: #f8f9ff;
-  --highlight-line: #bac6ff;
+  --highlight: #ffede8;
+  --highlight-soft: #ffede8;
+  --highlight-line: #ffd5c9;
   --featured: #cad3ff;
   --bullet: #aebcff;
 }
@@ -30,9 +30,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, rgba(228, 233, 255, 0.09), rgba(253, 253, 255, 0) 360px),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 15px;
@@ -56,14 +54,14 @@ body::before {
 a {
   color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.24);
+  border-bottom: 1px solid rgba(93, 91, 184, 0.28);
   transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
 
 a:hover,
 a:focus {
   color: var(--link-hover);
-  border-color: rgba(93, 91, 184, 0.45);
+  border-color: rgba(66, 64, 156, 0.45);
 }
 
 li::marker {
@@ -161,7 +159,7 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 560px) 276px;
+  grid-template-columns: minmax(0, 560px) 331px;
   grid-template-areas: "copy media";
   gap: 28px;
   align-items: center;
@@ -174,11 +172,11 @@ img {
 .hero-media {
   grid-area: media;
   justify-self: start;
-  width: 276px;
+  width: 331px;
 }
 
 .hero-media-frame {
-  width: 276px;
+  width: 331px;
   aspect-ratio: auto;
   overflow: hidden;
   border: 1px solid rgba(16, 24, 32, 0.14);
@@ -450,12 +448,10 @@ img {
 #research .paper-card:first-child {
   margin-top: 6px;
   padding: 20px 18px;
-  border: 1px solid rgba(202, 211, 255, 0.28);
+  border: 0;
   border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(248, 249, 255, 0.76), rgba(255, 255, 255, 0.94)),
-    var(--panel);
-  box-shadow: inset 4px 0 0 var(--featured);
+  background: var(--highlight-soft);
+  box-shadow: none;
 }
 
 .paper-card-media img,
@@ -639,14 +635,14 @@ img {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 540px) 264px;
+    grid-template-columns: minmax(0, 540px) 317px;
     gap: 24px;
     min-height: 260px;
   }
 
   .hero-media,
   .hero-media-frame {
-    width: 264px;
+    width: 317px;
   }
 
   .hero-role,
@@ -688,7 +684,7 @@ img {
 
   .hero-media,
   .hero-media-frame {
-    width: min(100%, 288px);
+    width: min(100%, 346px);
   }
 
   .hero-actions {
