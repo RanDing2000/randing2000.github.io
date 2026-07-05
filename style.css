@@ -1,20 +1,21 @@
 :root {
-  --bg: #fbfcfb;
+  --bg: #f8f9ff;
   --panel: #ffffff;
-  --panel-soft: #f4f7f6;
-  --text: #26323f;
+  --panel-soft: #f3f5fb;
+  --text: #1c1c1f;
   --title: var(--text);
   --muted: var(--text);
   --quiet: var(--text);
-  --line: #dce4e8;
-  --link: #00796f;
-  --link-hover: #b85b4f;
-  --code-blue: #356fd0;
-  --code-pink: #c65f62;
-  --highlight: #f0c84b;
-  --highlight-soft: #fff6cd;
-  --highlight-line: #d9aa18;
-  --featured: #d9aa18;
+  --line: #dfe2ea;
+  --link: #111111;
+  --link-hover: #5d5bb8;
+  --code-blue: #5d5bb8;
+  --code-pink: #6b5fb8;
+  --highlight: #bdc7ff;
+  --highlight-soft: #f0f2ff;
+  --highlight-line: #9aa7f0;
+  --featured: #9aa7f0;
+  --bullet: #bdc7ff;
 }
 
 * {
@@ -30,7 +31,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    linear-gradient(180deg, rgba(0, 121, 111, 0.06), transparent 360px),
+    linear-gradient(180deg, rgba(190, 200, 255, 0.26), rgba(248, 249, 255, 0) 360px),
     var(--bg);
   color: var(--text);
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -55,14 +56,18 @@ body::before {
 a {
   color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 121, 111, 0.26);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.24);
   transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
 
 a:hover,
 a:focus {
   color: var(--link-hover);
-  border-color: rgba(184, 91, 79, 0.45);
+  border-color: rgba(93, 91, 184, 0.45);
+}
+
+li::marker {
+  color: var(--bullet);
 }
 
 p,
@@ -113,7 +118,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(251, 252, 251, 0.9);
+  background: rgba(248, 249, 255, 0.9);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(16, 24, 32, 0.08);
 }
@@ -251,7 +256,7 @@ img {
 
 .copy-command:hover,
 .copy-command:focus-visible {
-  border-color: rgba(0, 121, 111, 0.42);
+  border-color: rgba(93, 91, 184, 0.34);
   background: #ffffff;
   outline: 0;
 }
@@ -397,8 +402,8 @@ img {
   width: 0.58rem;
   height: 0.58rem;
   border-radius: 2px;
-  background: var(--highlight);
-  box-shadow: 0 0 0 4px rgba(240, 200, 75, 0.2);
+  background: var(--bullet);
+  box-shadow: 0 0 0 4px rgba(189, 199, 255, 0.26);
 }
 
 #research .section-heading {
@@ -445,10 +450,10 @@ img {
 #research .paper-card:first-child {
   margin-top: 6px;
   padding: 20px 18px;
-  border: 1px solid rgba(217, 170, 24, 0.35);
+  border: 1px solid rgba(154, 167, 240, 0.32);
   border-radius: 8px;
   background:
-    linear-gradient(90deg, rgba(255, 246, 205, 0.96), rgba(255, 255, 255, 0.92)),
+    linear-gradient(90deg, rgba(240, 242, 255, 0.96), rgba(255, 255, 255, 0.92)),
     var(--panel);
   box-shadow: inset 4px 0 0 var(--featured);
 }
@@ -606,7 +611,7 @@ img {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: rgba(251, 252, 251, 0.94);
+  background: rgba(248, 249, 255, 0.94);
   z-index: 9999;
 }
 
