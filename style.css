@@ -1,7 +1,7 @@
 :root {
-  --bg: #fbfbff;
+  --bg: #fdfdff;
   --panel: #ffffff;
-  --panel-soft: #f7f8fc;
+  --panel-soft: #fafbff;
   --text: #1c1c1f;
   --title: var(--text);
   --muted: var(--text);
@@ -11,11 +11,11 @@
   --link-hover: #5d5bb8;
   --code-blue: #5d5bb8;
   --code-pink: #6b5fb8;
-  --highlight: #dfe4ff;
+  --highlight: #cad3ff;
   --highlight-soft: #f8f9ff;
-  --highlight-line: #cfd7ff;
-  --featured: #cfd7ff;
-  --bullet: #dfe4ff;
+  --highlight-line: #bac6ff;
+  --featured: #cad3ff;
+  --bullet: #aebcff;
 }
 
 * {
@@ -31,7 +31,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    linear-gradient(180deg, rgba(214, 221, 255, 0.16), rgba(251, 251, 255, 0) 360px),
+    linear-gradient(180deg, rgba(228, 233, 255, 0.09), rgba(253, 253, 255, 0) 360px),
     var(--bg);
   color: var(--text);
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -403,7 +403,7 @@ img {
   height: 0.58rem;
   border-radius: 2px;
   background: var(--bullet);
-  box-shadow: 0 0 0 4px rgba(223, 228, 255, 0.18);
+  box-shadow: 0 0 0 4px rgba(174, 188, 255, 0.2);
 }
 
 #research .section-heading {
@@ -450,10 +450,10 @@ img {
 #research .paper-card:first-child {
   margin-top: 6px;
   padding: 20px 18px;
-  border: 1px solid rgba(207, 215, 255, 0.24);
+  border: 1px solid rgba(202, 211, 255, 0.28);
   border-radius: 8px;
   background:
-    linear-gradient(90deg, rgba(248, 249, 255, 0.9), rgba(255, 255, 255, 0.92)),
+    linear-gradient(90deg, rgba(248, 249, 255, 0.76), rgba(255, 255, 255, 0.94)),
     var(--panel);
   box-shadow: inset 4px 0 0 var(--featured);
 }
