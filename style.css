@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --bg: #ffffff;
   --panel: #ffffff;
   --panel-soft: #fafbff;
@@ -11,11 +12,56 @@
   --link-hover: #42409c;
   --code-blue: #5d5bb8;
   --code-pink: #6b5fb8;
-  --highlight: #ffede8;
-  --highlight-soft: #ffede8;
-  --highlight-line: #ffd5c9;
+  --highlight: #fff1a8;
+  --highlight-soft: #fff8d6;
+  --highlight-line: #e6c957;
   --featured: #cad3ff;
   --bullet: #aebcff;
+  --grid-line-horizontal: rgba(16, 24, 32, 0.035);
+  --grid-line-vertical: rgba(16, 24, 32, 0.028);
+  --link-border: rgba(93, 91, 184, 0.28);
+  --link-border-hover: rgba(66, 64, 156, 0.45);
+  --header-bg: rgba(251, 251, 255, 0.9);
+  --header-shadow: rgba(16, 24, 32, 0.08);
+  --media-border: rgba(16, 24, 32, 0.14);
+  --surface-translucent: rgba(255, 255, 255, 0.82);
+  --surface-hover: #ffffff;
+  --marker-ring: rgba(174, 188, 255, 0.2);
+  --lightbox-bg: rgba(251, 251, 255, 0.94);
+  --lightbox-shadow: rgba(16, 24, 32, 0.18);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0c1514;
+  --panel: #12201e;
+  --panel-soft: #172824;
+  --text: #dbe9e5;
+  --title: #f0f8f5;
+  --muted: #c3d7d1;
+  --quiet: #9fbab3;
+  --line: #29433d;
+  --link: #64d6bd;
+  --link-hover: #92edd7;
+  --code-blue: #64d6bd;
+  --code-pink: #8bdcc8;
+  --highlight: #e6c85c;
+  --highlight-soft: #3b3217;
+  --highlight-line: #9b7d28;
+  --featured: #275c51;
+  --bullet: #4fd1b5;
+  --grid-line-horizontal: rgba(100, 214, 189, 0.055);
+  --grid-line-vertical: rgba(100, 214, 189, 0.042);
+  --link-border: rgba(100, 214, 189, 0.36);
+  --link-border-hover: rgba(146, 237, 215, 0.62);
+  --header-bg: rgba(12, 21, 20, 0.92);
+  --header-shadow: rgba(0, 0, 0, 0.38);
+  --media-border: rgba(164, 235, 216, 0.16);
+  --surface-translucent: rgba(18, 32, 30, 0.88);
+  --surface-hover: #1b312d;
+  --marker-ring: rgba(79, 209, 181, 0.22);
+  --lightbox-bg: rgba(7, 16, 15, 0.96);
+  --lightbox-shadow: rgba(0, 0, 0, 0.52);
 }
 
 * {
@@ -45,8 +91,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(16, 24, 32, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 24, 32, 0.028) 1px, transparent 1px);
+    linear-gradient(var(--grid-line-horizontal) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-vertical) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: linear-gradient(to bottom, black, transparent 70%);
 }
@@ -54,14 +100,14 @@ body::before {
 a {
   color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid rgba(93, 91, 184, 0.28);
+  border-bottom: 1px solid var(--link-border);
   transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
 
 a:hover,
 a:focus {
   color: var(--link-hover);
-  border-color: rgba(66, 64, 156, 0.45);
+  border-color: var(--link-border-hover);
 }
 
 li::marker {
@@ -116,9 +162,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(251, 251, 255, 0.9);
+  background: var(--header-bg);
   backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(16, 24, 32, 0.08);
+  box-shadow: 0 1px 0 var(--header-shadow);
 }
 
 .site-shell {
@@ -129,7 +175,8 @@ img {
 .site-header-inner {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 16px;
   min-height: 56px;
 }
 
@@ -151,6 +198,47 @@ img {
 .site-nav a:hover,
 .site-nav a:focus {
   color: var(--link);
+}
+
+.theme-toggle {
+  appearance: none;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface-translucent);
+  color: var(--title);
+  font: inherit;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--link);
+  background: var(--surface-hover);
+  color: var(--link-hover);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+.theme-toggle-icon {
+  font-size: 1.08rem;
+  line-height: 1;
+}
+
+.theme-toggle-floating {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 30;
 }
 
 .page-shell {
@@ -179,7 +267,7 @@ img {
   width: 331px;
   aspect-ratio: auto;
   overflow: hidden;
-  border: 1px solid rgba(16, 24, 32, 0.14);
+  border: 1px solid var(--media-border);
   border-radius: 18px;
   background: var(--panel);
 }
@@ -243,7 +331,7 @@ img {
   padding: 0 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--surface-translucent);
   color: var(--muted);
   font: inherit;
   font-size: 0.82rem;
@@ -254,8 +342,8 @@ img {
 
 .copy-command:hover,
 .copy-command:focus-visible {
-  border-color: rgba(93, 91, 184, 0.34);
-  background: #ffffff;
+  border-color: var(--link-border);
+  background: var(--surface-hover);
   outline: 0;
 }
 
@@ -334,7 +422,7 @@ img {
   height: 38px;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--surface-translucent);
   color: var(--muted);
   overflow: hidden;
 }
@@ -401,7 +489,7 @@ img {
   height: 0.58rem;
   border-radius: 2px;
   background: var(--bullet);
-  box-shadow: 0 0 0 4px rgba(174, 188, 255, 0.2);
+  box-shadow: 0 0 0 4px var(--marker-ring);
 }
 
 #research .section-heading {
@@ -607,7 +695,7 @@ img {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: rgba(251, 251, 255, 0.94);
+  background: var(--lightbox-bg);
   z-index: 9999;
 }
 
@@ -621,7 +709,7 @@ img {
   width: auto;
   height: auto;
   border: 1px solid var(--line);
-  box-shadow: 0 24px 60px rgba(16, 24, 32, 0.18);
+  box-shadow: 0 24px 60px var(--lightbox-shadow);
   cursor: zoom-out;
 }
 
@@ -796,5 +884,31 @@ img {
 
   .about-copy p {
     font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header-inner {
+    gap: 10px;
+  }
+
+  .site-nav {
+    gap: 8px;
+  }
+
+  .site-nav a {
+    font-size: 0.73rem;
+    letter-spacing: 0.04em;
+  }
+
+  .theme-toggle {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
   }
 }

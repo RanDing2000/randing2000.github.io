@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="theme.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -20,6 +21,9 @@
         <a href="#projects">Projects</a>
         <a href="#awards">Awards</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+      </button>
     </div>
   </header>
 
@@ -103,6 +107,7 @@
             <p class="paper-links">
               <a href="https://messykitchens.github.io/" target="_blank" rel="noopener noreferrer">Project Page</a>
               <a href="https://arxiv.org/abs/2603.16868" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://huggingface.co/datasets/MessyKitchens/MessyKitchens" target="_blank" rel="noopener noreferrer">Data</a>
               <a href="videos/messykitchens-talk.mp4" target="_blank" rel="noopener noreferrer">Video</a>
             </p>
             <p class="paper-summary">MessyKitchens provides high-quality synthetic training data and real-world test scenes for contact-rich kitchen reconstruction, with improved registration and reduced inter-object penetration. Built on it, MOD achieves state-of-the-art reconstruction and physical metrics.</p>
@@ -123,7 +128,10 @@
               <span>3D Geometry</span>
             </div>
             <p class="paper-links">
-              <a href="https://arxiv.org/abs/2510.03011" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://crystalccy1.github.io/3D-CovDiffusion/" target="_blank" rel="noopener noreferrer">Project Page</a>
+              <a href="https://arxiv.org/pdf/2510.03011v2" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://github.com/crystalccy1/3D-CovDiffusion" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://huggingface.co/datasets/ChenyuanC/3D-CovDiffusion-Train-Ready" target="_blank" rel="noopener noreferrer">Data</a>
               <a href="videos/3dcovdiffusion-video.mp4" target="_blank" rel="noopener noreferrer">Video</a>
             </p>
             <p class="paper-summary">3D-CovDiffusion introduces a 3D-aware diffusion policy for coverage path planning, aiming to improve coverage behavior through stronger 3D geometric understanding.</p>
