@@ -79,9 +79,55 @@
     }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindThemeToggle);
-  } else {
+  function bindHuggingFaceDownloadCounts() {
+    var counters = Array.prototype.slice.call(document.querySelectorAll('[data-hf-downloads]'));
+
+    function formatDownloadCount(downloads) {
+      try {
+        return new Intl.NumberFormat('en-US', {
+          notation: 'compact',
+          maximumFractionDigits: 1
+        }).format(downloads);
+      } catch (error) {
+        return downloads.toLocaleString('en-US');
+      }
+    }
+
+    counters.forEach(function (counter) {
+      var apiUrl = counter.getAttribute('data-hf-downloads');
+      if (!apiUrl || !window.fetch) {
+        return;
+      }
+
+      window.fetch(apiUrl)
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error('Unable to load Hugging Face download count');
+          }
+          return response.json();
+        })
+        .then(function (repository) {
+          if (typeof repository.downloads !== 'number') {
+            return;
+          }
+          counter.textContent = '\u2193' + formatDownloadCount(repository.downloads) + '/mo';
+          counter.setAttribute('title', repository.downloads.toLocaleString('en-US') + ' Hugging Face downloads in the last month');
+          counter.setAttribute('aria-label', repository.downloads.toLocaleString('en-US') + ' downloads in the last month');
+        })
+        .catch(function () {
+          // Keep the server-rendered fallback count if the API is unavailable.
+        });
+    });
+  }
+
+  function bindPageFeatures() {
     bindThemeToggle();
+    bindHuggingFaceDownloadCounts();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindPageFeatures);
+  } else {
+    bindPageFeatures();
   }
 }());

@@ -648,6 +648,13 @@ img {
   color: var(--quiet);
 }
 
+.hf-download-count {
+  color: var(--quiet);
+  font-size: 0.78rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
 .paper-summary {
   margin-bottom: 0;
   color: var(--muted);
