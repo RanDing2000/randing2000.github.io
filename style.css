@@ -513,6 +513,16 @@ img {
   line-height: 1.68;
 }
 
+.about-copy .research-highlight {
+  padding: 0.08em 0.22em;
+  border-radius: 3px;
+  background: var(--highlight-soft);
+  color: var(--text);
+  font-weight: 600;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 .card-list {
   display: grid;
   gap: 12px;
