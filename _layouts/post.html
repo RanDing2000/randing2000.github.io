@@ -1,3 +1,22 @@
----
-layout: default
----
+{%- comment -%}
+  Old project posts are not rendered as pages any more; everything lives on the homepage.
+  Send anyone arriving at an old post URL (e.g. /TAGRO/) to the matching homepage section.
+{%- endcomment -%}
+{%- assign section = "" -%}
+{%- if page.categories contains "TUM_research" -%}{%- assign section = "#research" -%}
+{%- elsif page.categories contains "TUM_courses" -%}{%- assign section = "#projects" -%}
+{%- endif -%}
+{%- capture target -%}{{ site.baseurl }}/{{ section }}{%- endcapture -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.name }}</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
+  <meta http-equiv="refresh" content="0; url={{ target }}">
+</head>
+<body>
+  <p><a href="{{ target }}">{{ site.name }}</a></p>
+</body>
+</html>

@@ -285,7 +285,6 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: auto;
   object-fit: contain;
   object-position: center;
   border-radius: 0;
@@ -713,6 +712,7 @@ img {
   justify-content: center;
   padding: 24px;
   background: var(--lightbox-bg);
+  cursor: zoom-out;
   z-index: 9999;
 }
 
@@ -893,10 +893,6 @@ img {
 
   #research .paper-card:first-child {
     padding: 18px 12px;
-  }
-
-  .section-heading h2 {
-    font-size: 1.55rem;
   }
 
   .about-copy p {
