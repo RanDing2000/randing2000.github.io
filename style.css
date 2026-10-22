@@ -1,66 +1,63 @@
 :root {
   color-scheme: light;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --bg: #ffffff;
   --panel: #ffffff;
-  --panel-soft: #fafbff;
-  --text: #1c1c1f;
+  --panel-soft: #f7f8fb;
+  --text: #111111;
   --title: var(--text);
-  --muted: var(--text);
-  --quiet: var(--text);
-  --line: #dfe2ea;
-  --link: #5d5bb8;
-  --link-hover: #42409c;
-  --code-blue: #5d5bb8;
-  --code-pink: #6b5fb8;
-  --highlight: #fff1a8;
-  --highlight-soft: #fff8d6;
-  --highlight-line: #e6c957;
-  --featured: #cad3ff;
-  --bullet: #aebcff;
-  --grid-line-horizontal: rgba(16, 24, 32, 0.035);
-  --grid-line-vertical: rgba(16, 24, 32, 0.028);
-  --link-border: rgba(93, 91, 184, 0.28);
-  --link-border-hover: rgba(66, 64, 156, 0.45);
-  --header-bg: rgba(251, 251, 255, 0.9);
+  --muted: #3d3d40;
+  --quiet: #6b6b70;
+  --line: #e4e5e9;
+  --link: #1a4fd6;
+  --link-hover: #0f3aa8;
+  --code-blue: #1a4fd6;
+  --code-pink: #1a4fd6;
+  --highlight: #dfe8ff;
+  --highlight-soft: #eef3ff;
+  --highlight-line: #a9c0ff;
+  --featured: #dfe8ff;
+  --bullet: #1a4fd6;
+  --link-border: rgba(26, 79, 214, 0.28);
+  --link-border-hover: rgba(15, 58, 168, 0.45);
+  --header-bg: rgba(255, 255, 255, 0.9);
   --header-shadow: rgba(16, 24, 32, 0.08);
   --media-border: rgba(16, 24, 32, 0.14);
   --surface-translucent: rgba(255, 255, 255, 0.82);
   --surface-hover: #ffffff;
-  --marker-ring: rgba(174, 188, 255, 0.2);
-  --lightbox-bg: rgba(251, 251, 255, 0.94);
+  --marker-ring: rgba(26, 79, 214, 0.14);
+  --lightbox-bg: rgba(255, 255, 255, 0.94);
   --lightbox-shadow: rgba(16, 24, 32, 0.18);
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0c1514;
-  --panel: #12201e;
-  --panel-soft: #172824;
-  --text: #dbe9e5;
-  --title: #f0f8f5;
-  --muted: #c3d7d1;
-  --quiet: #9fbab3;
-  --line: #29433d;
-  --link: #64d6bd;
-  --link-hover: #92edd7;
-  --code-blue: #64d6bd;
-  --code-pink: #8bdcc8;
-  --highlight: #e6c85c;
-  --highlight-soft: #3b3217;
-  --highlight-line: #9b7d28;
-  --featured: #275c51;
-  --bullet: #4fd1b5;
-  --grid-line-horizontal: rgba(100, 214, 189, 0.055);
-  --grid-line-vertical: rgba(100, 214, 189, 0.042);
-  --link-border: rgba(100, 214, 189, 0.36);
-  --link-border-hover: rgba(146, 237, 215, 0.62);
-  --header-bg: rgba(12, 21, 20, 0.92);
+  --bg: #0d0f14;
+  --panel: #141821;
+  --panel-soft: #161b26;
+  --text: #e6e8ee;
+  --title: #f5f6fa;
+  --muted: #c4c8d2;
+  --quiet: #8b91a0;
+  --line: #262c3a;
+  --link: #7aa2ff;
+  --link-hover: #a8c2ff;
+  --code-blue: #7aa2ff;
+  --code-pink: #7aa2ff;
+  --highlight: #2a3b66;
+  --highlight-soft: #18223a;
+  --highlight-line: #3d5596;
+  --featured: #22325a;
+  --bullet: #7aa2ff;
+  --link-border: rgba(122, 162, 255, 0.36);
+  --link-border-hover: rgba(168, 194, 255, 0.6);
+  --header-bg: rgba(13, 15, 20, 0.92);
   --header-shadow: rgba(0, 0, 0, 0.38);
-  --media-border: rgba(164, 235, 216, 0.16);
-  --surface-translucent: rgba(18, 32, 30, 0.88);
-  --surface-hover: #1b312d;
-  --marker-ring: rgba(79, 209, 181, 0.22);
-  --lightbox-bg: rgba(7, 16, 15, 0.96);
+  --media-border: rgba(200, 210, 235, 0.14);
+  --surface-translucent: rgba(20, 24, 33, 0.88);
+  --surface-hover: #1c2230;
+  --marker-ring: rgba(122, 162, 255, 0.2);
+  --lightbox-bg: rgba(8, 10, 14, 0.96);
   --lightbox-shadow: rgba(0, 0, 0, 0.52);
 }
 
@@ -78,36 +75,22 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--font-sans);
   font-size: 15px;
-  line-height: 1.72;
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(var(--grid-line-horizontal) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line-vertical) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(to bottom, black, transparent 70%);
 }
 
 a {
   color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid var(--link-border);
-  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
 
 a:hover,
 a:focus {
   color: var(--link-hover);
-  border-color: var(--link-border-hover);
 }
 
 li::marker {
@@ -138,18 +121,20 @@ h3 {
 h1 {
   font-size: 4.25rem;
   font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0;
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
 
 h2 {
   font-size: 1.35rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 h3 {
   font-size: 1.08rem;
   font-weight: 600;
+  letter-spacing: -0.005em;
 }
 
 img {
@@ -189,9 +174,9 @@ img {
 .site-nav a {
   border-bottom: 0;
   color: var(--title);
-  font-size: 0.93rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
@@ -304,55 +289,94 @@ img {
 .hero-role {
   margin: 0.9rem 0 0.12rem;
   color: var(--muted);
-  font-size: 1.06rem;
+  font-size: 1.12rem;
   line-height: 1.2;
 }
 
 .hero-affiliation {
   margin: 0;
   color: var(--muted);
-  font-size: 1.06rem;
+  font-size: 1.12rem;
   line-height: 1.35;
 }
 
 .contact-commands {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
   margin-top: 14px;
 }
 
 .copy-command {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  min-height: 38px;
-  padding: 0 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface-translucent);
+  gap: 9px;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 0.82rem;
-  line-height: 1;
+  font-size: 0.95rem;
+  line-height: 1.4;
   cursor: pointer;
-  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+  transition: color 160ms ease;
 }
 
 .copy-command:hover,
 .copy-command:focus-visible {
-  border-color: var(--link-border);
-  background: var(--surface-hover);
+  color: var(--link);
   outline: 0;
 }
 
-.command-prompt {
-  color: var(--code-blue);
+.copy-command svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.copy-command-icon {
+  color: var(--quiet);
 }
 
 .copy-label {
+  display: inline-flex;
+  color: var(--quiet);
+  opacity: 0.7;
+  transition: opacity 160ms ease, color 160ms ease;
+}
+
+.copy-command:hover .copy-label,
+.copy-command:focus-visible .copy-label {
   color: var(--link);
-  font-size: 0.76em;
+  opacity: 1;
+}
+
+.copy-label .check-icon,
+.copy-command.is-copied .copy-label .copy-icon {
+  display: none;
+}
+
+.copy-command.is-copied .copy-label .check-icon {
+  display: inline;
+}
+
+.copy-command.is-copied .copy-label {
+  color: var(--link);
+  opacity: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .hero-topics {
@@ -402,7 +426,7 @@ img {
   margin-bottom: 0;
   max-width: 43rem;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
@@ -508,8 +532,8 @@ img {
 .about-copy p {
   margin-bottom: 0.72rem;
   color: var(--text);
-  font-size: 0.92rem;
-  line-height: 1.68;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .about-copy .research-highlight {
@@ -596,15 +620,16 @@ img {
 }
 
 .paper-card-body h3 {
-  font-size: 1.08rem;
+  font-size: 1.1rem;
   line-height: 1.38;
 }
 
 .paper-authors {
-  margin-top: 0.45rem;
-  margin-bottom: 0.28rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.15rem;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .paper-authors a {
@@ -612,19 +637,14 @@ img {
   text-decoration: none;
 }
 
-.paper-authors a:hover,
-.paper-authors a:focus {
-  text-decoration: underline;
-}
-
 .paper-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 12px;
   align-items: center;
-  margin-bottom: 0.36rem;
+  margin-bottom: 0.6rem;
   color: var(--quiet);
-  font-size: 0.84rem;
+  font-size: 0.86rem;
 }
 
 .paper-meta span:last-child {
@@ -633,11 +653,24 @@ img {
 }
 
 .paper-tags {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.7rem;
+}
+
+.paper-tags span {
+  padding: 2px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--quiet);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .paper-links {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.6rem;
   font-size: 0.92rem;
   font-weight: 500;
 }
@@ -667,14 +700,14 @@ img {
 .paper-summary {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.93rem;
+  line-height: 1.6;
 }
 
 .research-note {
   margin: 0;
   color: var(--text);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   line-height: 1.35;
 }
 
@@ -696,8 +729,8 @@ img {
   padding: 18px 0 0 1.15rem;
   border-top: 1px solid var(--line);
   color: var(--text);
-  font-size: 0.92rem;
-  line-height: 1.68;
+  font-size: 0.98rem;
+  line-height: 1.65;
 }
 
 .award-list li + li {
@@ -756,12 +789,11 @@ img {
   }
 
   .copy-command {
-    min-height: 36px;
-    font-size: 0.78rem;
+    font-size: 0.92rem;
   }
 
   .about-copy p {
-    font-size: 0.9rem;
+    font-size: 0.98rem;
   }
 }
 
@@ -849,21 +881,12 @@ img {
     font-size: 0.94rem;
   }
 
-  .contact-commands {
-    gap: 10px;
-  }
-
   .hero-actions {
     gap: 8px;
   }
 
   .copy-command {
-    width: 100%;
-    min-height: 38px;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 0 14px;
-    font-size: 0.78rem;
+    font-size: 0.9rem;
   }
 
   .hero-icon-button {
@@ -896,7 +919,7 @@ img {
   }
 
   .about-copy p {
-    font-size: 0.88rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -931,8 +954,8 @@ img {
   padding: 0;
   list-style: none;
   color: var(--text);
-  font-size: 0.92rem;
-  line-height: 1.68;
+  font-size: 0.98rem;
+  line-height: 1.65;
 }
 
 .news-list li {
@@ -946,6 +969,7 @@ img {
 .news-date {
   color: var(--title);
   font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
 
 @media (max-width: 640px) {
