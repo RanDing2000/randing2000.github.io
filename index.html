@@ -15,8 +15,11 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" type="text/css" href="style.css?v=20261022">
+  <link rel="stylesheet" type="text/css" href="style.css?v=20261022d">
   <link rel="canonical" href="https://randing2000.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <script src="theme.js"></script>
   <script type="application/ld+json">
   {
@@ -129,6 +132,7 @@
         <li><span class="news-date">Sep 2026</span><span class="news-text">MessyKitchens is open-sourced: <a href="https://github.com/MessyKitchens/MessyKitchens" target="_blank" rel="noopener noreferrer">code</a> and <a href="https://huggingface.co/datasets/MessyKitchens/MessyKitchens" target="_blank" rel="noopener noreferrer">dataset</a>.</span></li>
         <li><span class="news-date">Aug 2026</span><span class="news-text">3D-CovDiffusion is open-sourced: <a href="https://github.com/crystalccy1/3D-CovDiffusion" target="_blank" rel="noopener noreferrer">code</a> and <a href="https://huggingface.co/datasets/ChenyuanC/3D-CovDiffusion-Train-Ready" target="_blank" rel="noopener noreferrer">dataset</a>.</span></li>
         <li><span class="news-date">Jul 2026</span><span class="news-text">TARGO is open-sourced: <a href="https://github.com/TARGO-benchmark/TARGO" target="_blank" rel="noopener noreferrer">code</a>, <a href="https://huggingface.co/datasets/randing2000/TARGO" target="_blank" rel="noopener noreferrer">dataset</a> and <a href="https://huggingface.co/randing2000/TARGO-Net" target="_blank" rel="noopener noreferrer">TARGO-Net model</a>.</span></li>
+        <li><span class="news-date">Aug 2025</span><span class="news-text">Started my PhD at <a href="https://mbzuai.ac.ae/" target="_blank" rel="noopener noreferrer">MBZUAI</a> with <a href="https://mbzuai.ac.ae/study/faculty/ivan-laptev/" target="_blank" rel="noopener noreferrer">Prof. Ivan Laptev</a>.</span></li>
       </ul>
     </section>
 
@@ -150,6 +154,7 @@
               <span>Physically Plausible Generation</span>
               <span>3D Reconstruction</span>
               <span>Simulation</span>
+              <span>Contact-rich Scenes</span>
             </div>
             <p class="paper-links">
               <a href="https://messykitchens.github.io/" target="_blank" rel="noopener noreferrer">Project Page</a>
@@ -172,6 +177,7 @@
             <p class="paper-meta"><span>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026</span></p>
             <div class="paper-tags" aria-label="Paper topics">
               <span>Spatial Robot Policy</span>
+              <span>Industrial Application</span>
             </div>
             <p class="paper-links">
               <a href="https://crystalccy1.github.io/3D-CovDiffusion/" target="_blank" rel="noopener noreferrer">Project Page</a>
@@ -195,6 +201,7 @@
             <div class="paper-tags" aria-label="Paper topics">
               <span>Simulation</span>
               <span>Spatial Robot Policy</span>
+              <span>Contact-rich Scenes</span>
             </div>
             <p class="paper-links">
               <a href="https://targo-benchmark.github.io/" target="_blank" rel="noopener noreferrer">Project Page</a>
@@ -215,7 +222,7 @@
         <h2>Projects</h2>
       </div>
       <div class="card-list compact-list">
-        <article class="paper-card compact-card">
+        <article class="paper-card compact-card" hidden>
           <div class="paper-card-media">
             <img src="images/3DSpatial.jpg" alt="Unsupervised Multi-View Stereo with Neural Radiance Field teaser" loading="lazy" decoding="async">
           </div>
@@ -230,7 +237,7 @@
           </div>
         </article>
 
-        <article class="paper-card compact-card">
+        <article class="paper-card compact-card" hidden>
           <div class="paper-card-media">
             <img src="images/DeformGen.jpg" alt="Deformation Generation via Autoregressive Models teaser" loading="lazy" decoding="async">
           </div>
@@ -250,7 +257,9 @@
           </div>
           <div class="paper-card-body">
             <h3>Chinese Undergraduate Curling AI Challenge</h3>
-            <p class="paper-meta"><span>Robotics Project at DUT Embedded Intelligent System Lab</span><span>2020</span></p>
+            <div class="paper-tags" aria-label="Project topics">
+              <span>Robotics System</span>
+            </div>
             <p class="paper-links">
               <a href="https://drive.google.com/file/d/1NK7LgLP1lEDhNb_w7FdsAPOVysHVaPAt/view?usp=sharing" target="_blank" rel="noopener noreferrer">Video</a>
             </p>
@@ -260,11 +269,13 @@
 
         <article class="paper-card compact-card">
           <div class="paper-card-media">
-            <img src="images/sheet_counter.jpg" alt="National Undergraduate Electronic Design Contest Liaoning Division teaser" loading="lazy" decoding="async">
+            <img src="images/sheet_counter.jpg" alt="National Undergraduate Electronic Design Contest teaser" loading="lazy" decoding="async">
           </div>
           <div class="paper-card-body">
-            <h3>National Undergraduate Electronic Design Contest Liaoning Division</h3>
-            <p class="paper-meta"><span>Embedded System Design Project at DUT Embedded Intelligent System Lab</span><span>2019</span></p>
+            <h3>National Undergraduate Electronic Design Contest</h3>
+            <div class="paper-tags" aria-label="Project topics">
+              <span>Robotics System</span>
+            </div>
             <p class="paper-links">
               <a href="pdfs/papersheet_report.pdf">Report</a>
             </p>
@@ -278,7 +289,9 @@
           </div>
           <div class="paper-card-body">
             <h3>National Undergraduate Electronic Design Contest</h3>
-            <p class="paper-meta"><span>Robotics Project at DUT Embedded Intelligent System Lab</span><span>2020</span></p>
+            <div class="paper-tags" aria-label="Project topics">
+              <span>Robotics System</span>
+            </div>
             <p class="paper-links">
               <a href="pdfs/album-nanjing2020.pdf">Album</a>
             </p>

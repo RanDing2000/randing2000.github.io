@@ -1,13 +1,13 @@
 :root {
   color-scheme: light;
-  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --bg: #ffffff;
   --panel: #ffffff;
   --panel-soft: #f7f8fb;
   --text: #111111;
   --title: var(--text);
-  --muted: #3d3d40;
-  --quiet: #6b6b70;
+  --muted: #111111;
+  --quiet: #111111;
   --line: #e4e5e9;
   --link: #1a4fd6;
   --link-hover: #0f3aa8;
@@ -37,8 +37,8 @@
   --panel-soft: #161b26;
   --text: #e6e8ee;
   --title: #f5f6fa;
-  --muted: #c4c8d2;
-  --quiet: #8b91a0;
+  --muted: #e6e8ee;
+  --quiet: #e6e8ee;
   --line: #262c3a;
   --link: #7aa2ff;
   --link-hover: #a8c2ff;
@@ -66,6 +66,7 @@
 }
 
 html {
+  font-size: 17px;
   scroll-behavior: smooth;
   background: var(--bg);
 }
@@ -76,7 +77,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -84,6 +85,7 @@ body {
 
 a {
   color: var(--link);
+  font-weight: 700;
   text-decoration: none;
   transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
@@ -119,10 +121,10 @@ h3 {
 }
 
 h1 {
-  font-size: 4.25rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.035em;
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
 }
 
 h2 {
@@ -168,16 +170,15 @@ img {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
 }
 
 .site-nav a {
   border-bottom: 0;
-  color: var(--title);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
 }
 
 .site-nav a:hover,
@@ -562,6 +563,10 @@ img {
   box-shadow: none;
 }
 
+.paper-card[hidden] {
+  display: none;
+}
+
 .paper-card:hover {
   transform: none;
 }
@@ -620,7 +625,7 @@ img {
 }
 
 .paper-card-body h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   line-height: 1.38;
 }
 
@@ -628,12 +633,13 @@ img {
   margin-top: 0.4rem;
   margin-bottom: 0.15rem;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
 }
 
 .paper-authors a {
   color: inherit;
+  font-weight: inherit;
   text-decoration: none;
 }
 
@@ -644,7 +650,7 @@ img {
   align-items: center;
   margin-bottom: 0.6rem;
   color: var(--quiet);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
 }
 
 .paper-meta span:last-child {
@@ -659,20 +665,24 @@ img {
   margin-bottom: 0.7rem;
 }
 
+.paper-card-body h3 + .paper-tags {
+  margin-top: 0.45rem;
+}
+
 .paper-tags span {
   padding: 2px 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--quiet);
-  font-size: 0.78rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.5;
 }
 
 .paper-links {
   margin-bottom: 0.6rem;
-  font-size: 0.92rem;
-  font-weight: 500;
+  font-size: 0.9375rem;
+  font-weight: 700;
 }
 
 .paper-links a {
@@ -700,7 +710,7 @@ img {
 .paper-summary {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 0.93rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -769,7 +779,7 @@ img {
   }
 
   h1 {
-    font-size: 3.9rem;
+    font-size: 2.5rem;
   }
 
   .hero {
@@ -803,7 +813,7 @@ img {
   }
 
   h1 {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
   }
 
   .hero {
@@ -865,11 +875,11 @@ img {
   }
 
   .site-nav a {
-    font-size: 0.82rem;
+    font-size: 0.92rem;
   }
 
   h1 {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
   }
 
   .page-shell {
@@ -933,8 +943,7 @@ img {
   }
 
   .site-nav a {
-    font-size: 0.73rem;
-    letter-spacing: 0.04em;
+    font-size: 0.86rem;
   }
 
   .theme-toggle {
