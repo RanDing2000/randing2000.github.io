@@ -120,9 +120,78 @@
     });
   }
 
+  function bindGitHubStarCounts() {
+    var counters = Array.prototype.slice.call(document.querySelectorAll('[data-gh-stars]'));
+
+    counters.forEach(function (counter) {
+      var apiUrl = counter.getAttribute('data-gh-stars');
+      if (!apiUrl || !window.fetch) {
+        return;
+      }
+
+      window.fetch(apiUrl)
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error('Unable to load GitHub star count');
+          }
+          return response.json();
+        })
+        .then(function (repository) {
+          var stars = repository.stargazers_count;
+          if (typeof stars !== 'number') {
+            return;
+          }
+          var label = stars.toLocaleString('en-US') + ' GitHub star' + (stars === 1 ? '' : 's');
+          counter.textContent = '★' + stars.toLocaleString('en-US');
+          counter.setAttribute('title', label);
+          counter.setAttribute('aria-label', label);
+        })
+        .catch(function () {
+          // Keep the server-rendered fallback count if the API is unavailable.
+        });
+    });
+  }
+
+  function bindBibtexBlocks() {
+    var toggles = Array.prototype.slice.call(document.querySelectorAll('.bibtex-toggle'));
+
+    toggles.forEach(function (toggle) {
+      var block = document.getElementById(toggle.getAttribute('aria-controls'));
+      if (!block) {
+        return;
+      }
+
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        block.hidden = !block.hidden;
+        toggle.setAttribute('aria-expanded', block.hidden ? 'false' : 'true');
+      });
+
+      var copyButton = block.querySelector('.bibtex-copy');
+      var code = block.querySelector('code');
+      if (!copyButton || !code) {
+        return;
+      }
+
+      copyButton.addEventListener('click', function () {
+        if (!navigator.clipboard) {
+          return;
+        }
+        navigator.clipboard.writeText(code.textContent).then(function () {
+          copyButton.textContent = 'Copied';
+          window.setTimeout(function () {
+            copyButton.textContent = 'Copy';
+          }, 1500);
+        });
+      });
+    });
+  }
+
   function bindPageFeatures() {
     bindThemeToggle();
     bindHuggingFaceDownloadCounts();
+    bindGitHubStarCounts();
+    bindBibtexBlocks();
   }
 
   if (document.readyState === 'loading') {

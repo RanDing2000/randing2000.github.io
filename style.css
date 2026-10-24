@@ -700,11 +700,50 @@ img {
   color: var(--quiet);
 }
 
-.hf-download-count {
+.hf-download-count,
+.gh-star-count {
   color: var(--quiet);
   font-size: 0.78rem;
   font-weight: 400;
   white-space: nowrap;
+}
+
+.bibtex-block {
+  position: relative;
+  margin: 0 0 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface-hover);
+}
+
+.bibtex-block pre {
+  margin: 0;
+  padding: 2.2rem 0.85rem 0.75rem;
+  overflow-x: auto;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.bibtex-copy {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--link-border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--link);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.bibtex-copy:hover,
+.bibtex-copy:focus {
+  border-color: var(--link-border-hover);
+  color: var(--link-hover);
 }
 
 .paper-summary {
