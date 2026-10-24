@@ -571,7 +571,7 @@ img {
   transform: none;
 }
 
-#research .paper-card:first-child {
+#research .paper-card.is-featured {
   margin-top: 6px;
   padding: 20px 18px;
   border: 0;
@@ -963,7 +963,7 @@ img {
     padding: 18px 0;
   }
 
-  #research .paper-card:first-child {
+  #research .paper-card.is-featured {
     padding: 18px 12px;
   }
 
