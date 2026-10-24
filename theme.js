@@ -80,7 +80,34 @@
   }
 
   function bindHuggingFaceDownloadCounts() {
-    var counters = Array.prototype.slice.call(document.querySelectorAll('[data-hf-downloads]'));
+    var counters = Array.prototype.slice.call(document.querySelectorAll('[data-hf-downloads], [data-hf-collection]'));
+
+    function fetchJson(url) {
+      return window.fetch(url).then(function (response) {
+        if (!response.ok) {
+          throw new Error('Unable to load Hugging Face download count');
+        }
+        return response.json();
+      });
+    }
+
+    // A collection's count is the sum of its datasets' monthly downloads.
+    function fetchCollectionDownloads(apiUrl) {
+      return fetchJson(apiUrl).then(function (collection) {
+        var datasets = (collection.items || []).filter(function (item) {
+          return item.type === 'dataset';
+        });
+        return Promise.all(datasets.map(function (item) {
+          return fetchJson('https://huggingface.co/api/datasets/' + item.id + '?expand=downloads');
+        }));
+      }).then(function (repositories) {
+        return {
+          downloads: repositories.reduce(function (total, repository) {
+            return total + (typeof repository.downloads === 'number' ? repository.downloads : 0);
+          }, 0)
+        };
+      });
+    }
 
     function formatDownloadCount(downloads) {
       try {
@@ -95,17 +122,12 @@
 
     counters.forEach(function (counter) {
       var apiUrl = counter.getAttribute('data-hf-downloads');
-      if (!apiUrl || !window.fetch) {
+      var collectionUrl = counter.getAttribute('data-hf-collection');
+      if ((!apiUrl && !collectionUrl) || !window.fetch) {
         return;
       }
 
-      window.fetch(apiUrl)
-        .then(function (response) {
-          if (!response.ok) {
-            throw new Error('Unable to load Hugging Face download count');
-          }
-          return response.json();
-        })
+      (collectionUrl ? fetchCollectionDownloads(collectionUrl) : fetchJson(apiUrl))
         .then(function (repository) {
           if (typeof repository.downloads !== 'number') {
             return;
